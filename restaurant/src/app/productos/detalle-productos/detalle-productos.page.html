@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-item>
+    <ion-label class="ion-text-center">detalle de productos</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <div>
+          <ion-button color="warning">
+            <ion-icon name="sunny-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="warning">
+            <ion-icon name="sunny-outline"></ion-icon>
+          </ion-button>
+          <ion-button color="warning">
+            <ion-icon name="sunny-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+
+      <ion-col size="9">
+        <ion-slides>
+          <ion-slide *ngFor="let item of [1,2]">
+            <img [src]="datos.url"/>
+          </ion-slide>
+          
+        </ion-slides>
+       
+      </ion-col>
+
+      <ion-col>
+        <div class="linea-gris"></div>
+        <ion-label class="ion-text-center">
+          <p>Nombre del Producto</p>
+          <p>{{datos.titulo}}</p>
+        </ion-label>
+        <div class="linea-gris"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-row>
+
+        <ion-col size="6" class="ion-text-center desc">
+          <ion-button fill="clear" color="light">
+            Descripcion
+          </ion-button>
+        </ion-col>
+        <ion-col size="6" class="ion-text-center ">
+          <ion-button fill="clear" color="dark">
+            Descripcion
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
